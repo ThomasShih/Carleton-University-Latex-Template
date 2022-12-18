@@ -1,0 +1,10 @@
+% Declare a references section
+\section{References}
+
+% Using a group here to override the section command
+% As so we can remove the References part of the biblography
+\begingroup
+\renewcommand{\section}[2]{}
+\bibliographystyle{IEEEtran}
+\bibliography{references.bib}
+\endgroup

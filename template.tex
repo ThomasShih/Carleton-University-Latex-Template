@@ -1,0 +1,30 @@
+% Yes this is a report, but the article document is the best for my use case
+\documentclass{article}
+
+% Graphics are stored in the images folder. 
+% The graphicspath command tells LaTeX where to look for them.
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% Format the datetime
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+
+% Custom Spacing
+\usepackage{setspace}
+\onehalfspacing
+
+% Use the Cambria Font
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Cambria}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THE ACTUAL DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\include{titlepage.tex}
+
+\tableofcontents
+
+\include{body/main.tex}
+
+\include{references.tex}
+\end{document}
