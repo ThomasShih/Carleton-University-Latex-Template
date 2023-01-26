@@ -1,0 +1,51 @@
+\documentclass[12pt]{report}
+
+% Set the margins, total printable area is 6in x 8in
+\usepackage[letterpaper, total={7in, 9in}]{geometry}
+
+% Graphics are stored in the images folder. 
+% The graphicspath command tells LaTeX where to look for them.
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% Format the datetime
+\usepackage[ddmmyyyy]{datetime}
+% \renewcommand{\dateseparator}{.}
+
+% Custom Spacing
+\usepackage{setspace}
+\doublespacing
+
+% Use the Cambria Font
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Cambria}
+
+% Tolerate errors in the document
+\tolerance=1000
+
+% Allows for more complicated math
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Useful utils
+\usepackage{placeins}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% THE ACTUAL DOCUMENT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{titlepage.tex}
+
+\tableofcontents
+\pagebreak
+
+\input{body/01_objectives.tex}
+\input{body/02_test_procedure.tex}
+\input{body/03_engineering_schematics.tex}
+\input{body/04_data_tables.tex}
+\input{body/05_calculations_graphs_results.tex}
+\input{body/06_discussions_and_recommendations.tex}
+\input{body/07_conclusion.tex}
+
+\pagebreak
+
+\input{references.tex}
+\end{document}
